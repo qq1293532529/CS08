@@ -1,0 +1,22 @@
+using System; using System.Collections.Generic; namespace ConsoleApp1 { class Progra
+m { static void Main(string[] args) { LinkedList<float> kset = new LinkedList<float>(); k
+set.AddFirst(12.3f); kset.AddFirst(42.5f); kset.AddLast(9f); kset.AddLast(7.2f); kset.AddAf
+ter(kset.Find(12.3f), 8.6f); var node1 = kset.Find(12.3f); var node2 = node1.Next; kset.R
+emove(node2); kset.AddBefore (node1, node2.Value); foreach (float n in kset) Console.
+WriteLine(n); } } }
+
+using System; using System.Collections.Concurrent; namespace Lx8.txt2 { class Program
+ { class Dorder<T> : IComparer<T> where T :IComparable { public int Cmopare(T m, T 
+n) => m-n; n.CompareTo(n); } static void Main(string[] args) { SortedSet<long> orderl 
+= new SortedSet<long> { 15, 8, 45, 6 }; foreach (long i in orderl) Console.WriteLine(i); S
+ortedSet<string> order2 = new SortedSet<string> { "jsp", "asp", "php" }; foreach (strin
+g i in order2) Console.WriteLine(i); SortedSet<DateTime> order3 = new SortedSet<Dat
+eTime> { new DateTime(2012,5,6),new DateTime(2011,5,6),new DateTime(2013,5,6),}; f
+oreach (DateTime i in order3) Console.WriteLine(i); } 
+
+using System; using System.Collections.Generic; namespace ConsoleApp6 { class Progr
+am { static void Main(string[] args) { IEnumerable<decimal> Pass(List<decimal> scores)
+ { foreach (decimal sc in scores) { if (sc > 60) yield return sc; } } List<decimal> scSet = 
+new List<decimal> { 80.5m, 56m, 71m, 70.5m, 49m }; IEnumerable<decimal> passSet 
+= Pass(scSet); Console.WriteLine("以下成绩及格"); foreach (decimal n in passSet) { Consol
+e.WriteLine(n); } } } }
